@@ -1,0 +1,31 @@
+{
+  "businessName": "Shree Govind Tours & Travels",
+  "locations": ["Lakhisarai", "Ranchi"],
+
+  "nationalTours": [
+    {
+      "name": "Goa Beach Tour",
+      "price": "12999",
+      "days": "4 Days / 3 Nights",
+      "details": "Hotel + Breakfast + Transfers"
+    }
+  ],
+
+  "internationalTours": [
+    {
+      "name": "Dubai Luxury Trip",
+      "price": "45999",
+      "days": "5 Days / 4 Nights",
+      "details": "City Tour + Desert Safari"
+    }
+  ],
+
+  "hotels": [
+    "3–5 Star Hotels",
+    "Complimentary Breakfast",
+    "Airport Transfers",
+    "Swimming Pool Access",
+    "Spa & Wellness",
+    "High-Speed WiFi"
+  ]
+}

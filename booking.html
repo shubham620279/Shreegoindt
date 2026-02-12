@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Your Tour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 style="text-align:center;">Book Your Tour</h2>
+
+<form id="bookingForm">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Gmail Address" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<input type="text" name="city" placeholder="City (From where traveling)" required>
+
+<select name="tour">
+<option>Goa Beach Tour</option>
+<option>Dubai Luxury Trip</option>
+</select>
+
+<input type="date" name="travelDate" required>
+
+<textarea name="message" placeholder="Special Request"></textarea>
+
+<button type="submit">Submit Booking</button>
+</form>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbyu86uWuc8aULKSUN_BmT_dEosjrFLmgS2wdgLCYaoPvcY2yGnnAdXWyLybzZFe1n6U/exec";
+
+document.getElementById("bookingForm")
+.addEventListener("submit", e => {
+  e.preventDefault();
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: new FormData(e.target)
+  })
+  .then(response => alert("Booking Submitted Successfully!"))
+  .catch(error => alert("Error! Try again"));
+});
+</script>
+
+</body>
+</html>
